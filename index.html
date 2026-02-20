@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Da Master Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div id="welcome">
+    <h1>DA QUIZ</h1>
+    <button onclick="goSubject()">Start</button>
+</div>
+
+<div id="subject" class="hidden">
+    <h2>Select Subject</h2>
+    <button onclick="selectSubject('AL 101')">AL 101</button>
+    <button onclick="selectSubject('CC104')">CC104</button>
+</div>
+
+<div id="type" class="hidden">
+    <h2>Select Quiz Type</h2>
+    <button onclick="startType('MCQ')">Multiple Choice</button>
+    <button onclick="startType('ID')">Identification</button>
+    <button onclick="startType('PS')">Problem Solving</button>
+</div>
+
+<div id="quiz" class="hidden">
+    <h3 id="qnum"></h3>
+    <h2 id="question"></h2>
+    <div id="choices"></div>
+    <input id="inputAns" class="hidden" placeholder="Type answer here">
+    <br><br>
+    <button id="submitBtn" onclick="submitAnswer()" disabled>Submit</button>
+</div>
+
+<div id="finish" class="hidden">
+    <h1>Finished 🎉</h1>
+    <h2 id="finishMsg"></h2>
+    <h1 id="scoreText"></h1>
+    <button onclick="goSubject()">Restart</button>
+</div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
